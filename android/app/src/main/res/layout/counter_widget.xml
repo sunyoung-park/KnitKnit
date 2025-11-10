@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- 클릭 가능한 영역 (제품명 + 카운트) -->
+    <LinearLayout
+        android:id="@+id/widget_clickable_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground">
+
+        <!-- 제품명 -->
+        <TextView
+            android:id="@+id/widget_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="제품명"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:paddingBottom="8dp"/>
+
+        <!-- 현재 카운트 -->
+        <TextView
+            android:id="@+id/widget_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"/>
+
+    </LinearLayout>
+
+    <!-- 버튼들 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- - 버튼 -->
+        <Button
+            android:id="@+id/button_decrease"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="-"
+            android:textSize="24sp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Reset 버튼 -->
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Reset"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- + 버튼 -->
+        <Button
+            android:id="@+id/button_increase"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="+"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
